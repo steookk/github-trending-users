@@ -19,11 +19,11 @@ end
 group :development, :test do 
 	#rspec and factorygirl must be in dev group in order to generate files
   	gem 'rspec-rails', '~> 2.14.0' 
-	#gem 'factory_girl_rails', '~> 4.3.0'
+	gem 'factory_girl_rails', '~> 4.3.0'
 end
 
 group :test do 
-	#gem 'webmock', '~> 1.16'
+	gem 'webmock', '~> 1.16'
 end
 
 group :production do 

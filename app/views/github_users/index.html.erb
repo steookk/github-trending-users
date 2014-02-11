@@ -1,0 +1,22 @@
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Username</th>
+			<th>Full name</th>
+			<th># of projects<th>
+		</tr>
+	</thead>
+
+	<% @github_users.each do |user| %>
+		<tr>
+			<% if @new_github_users.include? user %>
+				<td class="active"><span class="label label-primary">New</span>
+			<% else %> 
+				<td>
+			<% end %>
+			<%= user.name %></td>
+			<td>ciao</td>
+			<td>ciao</td>
+		</tr>
+	<% end %>
+</table>
