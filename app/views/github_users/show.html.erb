@@ -36,7 +36,7 @@
 	<tbody>
 		<% @github_user.repositories.each do |repository| %>
 			<tr>
-				<td><a href="#"><%= repository.name %></a></td>
+				<td><%= link_to repository.name, repository_path(repository) %></td>
 				<td><%= repository.language %></td>
 				<td><a href="<%= repository.html_url %>">See it in Github</a></td>
 			</tr>

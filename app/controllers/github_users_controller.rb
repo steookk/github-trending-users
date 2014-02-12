@@ -2,7 +2,7 @@ class GithubUsersController < ApplicationController
 
 	def index 	
 		@new_github_users = GithubUser.fetch_users
-		@github_users = GithubUser.all
+		@github_users = GithubUser.order('created_at DESC')
 	end
 
 	def show 

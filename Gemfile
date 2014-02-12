@@ -7,6 +7,7 @@ gem 'pg' #postgres
 #data scraping from webpage 
 gem 'nokogiri', '1.5.4'
 gem 'rest-client', "~> 1.6.0"
+##
 
 gem 'octokit', :github => 'octokit/octokit.rb', :branch => 'master' 
 
@@ -29,7 +30,5 @@ group :test do
 	gem 'webmock', '~> 1.16'
 end
 
-group :production do 
-	#gem 'memcachier'
-	#gem 'dalli'
+group :production do
 end

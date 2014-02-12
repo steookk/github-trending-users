@@ -4,4 +4,6 @@ GithubTrendingUsers::Application.routes.draw do
 
    resources :github_users, :only => [:index, :show]
 
+   resources :repositories, :only => :show
+
 end
