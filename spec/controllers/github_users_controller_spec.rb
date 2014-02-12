@@ -49,6 +49,12 @@ describe GithubUsersController do
 					end
 				end
 			end
-		end
 
+			describe 'GET #show' do 
+				describe 'success' do 
+					it 'adds new repositories of the shown user'
+					it 'is successful' 
+				end
+			end
+		end
 end

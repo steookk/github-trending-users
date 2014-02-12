@@ -3,20 +3,25 @@
 		<tr>
 			<th>Username</th>
 			<th>Full name</th>
-			<th># of projects<th>
+			<th>Type</th>
+			<th>Hireable</th>
+			<th>Rep.</th>
 		</tr>
 	</thead>
-
-	<% @github_users.each do |user| %>
-		<tr>
-			<% if @new_github_users.include? user %>
-				<td class="active"><span class="label label-primary">New</span>
-			<% else %> 
-				<td>
-			<% end %>
-			<%= user.name %></td>
-			<td>ciao</td>
-			<td>ciao</td>
-		</tr>
-	<% end %>
+	<tbody>
+		<% @github_users.each do |user| %>
+			<tr>
+				<% if @new_github_users.include? user %>
+					<td class="active"><span class="label label-primary">New</span>
+				<% else %> 
+					<td>
+				<% end %>
+				<a href="<%= github_user_path(user) %>"><%= user.name %></a></td>
+				<td><%= user.fullname %></td>
+				<td><%= user.type_of_user %></td>
+				<td><%= user.hireable %></td>
+				<td><%= user.public_repos %></td>
+			</tr>
+		<% end %>
+	</tbody>
 </table>

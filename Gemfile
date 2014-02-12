@@ -8,6 +8,9 @@ gem 'pg' #postgres
 gem 'nokogiri', '1.5.4'
 gem 'rest-client', "~> 1.6.0"
 
+gem 'octokit', :github => 'octokit/octokit.rb', :branch => 'master' 
+
+gem 'gravatar_image_tag', '1.0.0'
 gem 'jquery-rails'
 
 group :assets do
